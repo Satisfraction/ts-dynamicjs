@@ -26,3 +26,10 @@ function fetchProduct(id) {
 	  console.error('Fehler beim Abrufen des Produkts:', error);
 	});
   
+	fetchProduct(2)
+	.then((product) => {
+	  updateProduct(product, 'product-2');
+	})
+	.catch((error) => {
+	  console.error('Fehler beim Abrufen des Produkts:', error);
+	});
