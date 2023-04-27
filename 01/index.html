@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fetch Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+      padding: 20px;
+    }
+    h1 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    p {
+      margin-bottom: 10px;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+    li {
+      margin-bottom: 5px;
+    }
+    code {
+      font-family: "Courier New", monospace;
+      font-size: 14px;
+      background-color: #f1f1f1;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Fetch API Aufgabe 1</h1>
+  <p>In dieser Aufgabe wird die fetchProduct-Funktion verwendet, um die Produktdaten für das Produkt mit der ID 1 abzurufen. Die Funktion updateProduct aktualisiert die Produktinformationen auf der Seite, indem sie die Titel-, Preis- und Bildelemente auswählt und deren Textinhalte bzw. Quelle aktualisiert.</p>
+
+  <h2 id="1-product-title"></h2>
+  <p id="1-product-price"></p>
+  <img id="1-product-image" alt="Produktbild" style="max-width: 200px;">
+
+  <script src="app.js"></script>
+
+  <h2 style="font-weight: bold;">Aufgabe:</h2>
+  <p> Ubs! Irgendwie haben wir hier etwas fehlenden Code. Füge ein zweites Produkt in index.html hinzu und in app.js schreibe den passenden API call um das Produkt mit der ID 2 abzurufen.</p>
+  <h1>Was ist fetch?</h1>
+  <p>fetch() ist eine Funktion in JavaScript, die es uns ermöglicht, Daten von einer API abzurufen und sie auf unserer Webseite anzuzeigen. Eine API (Application Programming Interface) ist ein Satz von Regeln, Protokollen und Tools, die es ermöglichen, Daten und Funktionalitäten zwischen verschiedenen Anwendungen zu teilen.</p>
+  <h2>Wie verwende ich fetch?</h2>
+  <p>Um fetch() zu verwenden, müssen wir zunächst eine URL angeben, von der wir die Daten abrufen möchten. Wir können dies in der folgenden Syntax tun:</p>
+  <pre><code>fetch('https://example.com/data')</code></pre>
+  <p>Das gibt uns ein Promise-Objekt zurück, das wir verwenden können, um mit den zurückgegebenen Daten zu arbeiten. Ein Promise ist ein Konzept in JavaScript, das es uns ermöglicht, asynchronen Code zu schreiben. Das bedeutet, dass wir Code ausführen können, während wir auf Daten warten, die möglicherweise von einem entfernten Server abgerufen werden.</p>
+  <h2>Promises</h2>
+  <p>Ein Promise-Objekt repräsentiert den asynchronen Fortschritt eines Vorgangs und kann entweder den endgültigen Wert zurückgeben oder eine Fehlermeldung liefern. Ein Promise hat drei mögliche Zustände:</p>
+  <ul>
+    <li>Pending: Der asynchrone Vorgang läuft noch.</li>
+    <li>Resolved: Der asynchrone Vorgang wurde erfolgreich abgeschlossen und es wurde ein Ergebnis zurückgegeben.</li>
+    <li>Rejected: Der asynchrone Vorgang ist fehlgeschlagen und es wurde ein Fehler zurückgegeben.</li>
+  </ul>
+  <p>Wir können mit then() und catch() Methoden auf den Zustand eines Promise reagieren.</p>
+  <p>Das folgende Beispiel zeigt, wie man mit fetch() ein Promise-Objekt erstellt und dann mit den zurückgegebenen Daten arbeitet:</p>
+  <pre><code>fetch('https://example.com/data')
+  .then(response => response.json())
+  .then(data => {
+    // arbeite mit den Daten
+  })
+  .catch(error => {
+    // Behandle den Fehler
+  });</code></pre>
+  <h2>Beispiel aus dem echten Leben</h2>
+  <p>Stellen Sie sich vor, Sie bestellen ein Buch bei Amazon. Wenn Sie auf die Schaltfläche "Bestellen" klicken, wird eine asynchrone Operation ausgeführt, um Ihre Bestellung zu verarbeiten. Während dieser Zeit können Sie andere Dinge auf der Website tun, ohne dass die Bestellverarbeitung gestört wird.</p>
+  <p>In JavaScript können wir dies mit Promises nachbilden. Wir könnten eine Funktion schreiben, die eine API aufruft, um Informationen über das Buch abzurufen, und dann eine andere Funktion, die die Buchbestellung verarbeitet. Da diese Vorgänge asynchron sind, verwenden wir Promises, um sicherzustellen, dass die Bestellung erst ausgeführt wird, wenn die Buchinformationen abgerufen wurden.</p>
+</html>
+</body>
+</html>
